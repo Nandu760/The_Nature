@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nature vibes</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: skyblue;
+      scroll-behavior: smooth;
+    }
+
+    .navbar {
+      background-color: whitesmoke;
+    }
+
+    .navbar .nav-link,
+    .navbar-brand {
+      color: rgb(41, 10, 97);
+    }
+
+    .navbar .nav-link:hover {
+      color: #d6a5c3;
+    }
+
+    .hero {
+      background: url(https://images.unsplash.com/photo-1519092437326-bfd121eb53ae?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max) no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 5px #000;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: bold;
+    }
+
+    .section-title {
+      text-align: center;
+      margin: 40px 0 20px;
+      color: #2e7d32;
+    }
+
+    .gallery img {
+      height: 200px;
+      object-fit: cover;
+      border-radius: 15px;
+      width: 100%;
+    }
+
+    .contact-form .form-control {
+      border-radius: 10px;
+      box-shadow: none;
+    }
+
+    .contact-form .btn {
+      border-radius: 8px;
+      padding: 10px;
+      font-weight: 500;
+      font-size: 1.1rem;
+    }
+
+    footer {
+      background-color: #1d8310fa;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .social-icons i {
+      font-size: 24px;
+      margin: 0 10px;
+      color: white;
+    }
+
+    .social-icons i:hover {
+      color: #a5d6a7;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <a class="navbar-brand" href="#">
+      <img src="https://media.istockphoto.com/id/1171688465/vector/100-natural-logo.jpg?s=612x612&w=0&k=20&c=vk2frInWcxjsFRryuekU-bpmfZFrh0WZf8RpriEnQLk=" alt="Nature Bliss Logo" style="height: 80px; margin-left: 30px;">
+    </a>
+    <div class="container">
+      <a class="navbar-brand" href="#">Nature vibes</a>
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon text-success"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero text-center" id="home">
+    <div>
+      <h1>Welcome to Nature Vibes</h1>
+      <p class="lead">Explore the beauty of nature</p>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <div class="container py-5" id="about">
+    <h2 class="section-title">About Nature</h2>
+    <p class="text-center">Nature offers us beauty, peace, and inspiration. From lush green forests to serene lakes and towering mountains, it reminds us of the planet’s wonder and the need to protect it. Nature is the beautiful and intricate tapestry of life that surrounds us, encompassing everything from towering mountains and vast oceans to lush forests and vibrant wildlife. It plays a crucial role in sustaining life, providing us with clean air, fresh water, and fertile soil. The interdependence of all living beings within nature creates a delicate balance that is essential for the health of our ecosystem.</p>
+  </div>
+
+  <!-- Gallery Section -->
+  <div class="container gallery py-5" id="gallery">
+    <h2 class="section-title">Gallery</h2>
+    <div class="row g-3">
+      <div class="col-md-15">
+        <img src="https://images.hdqwalls.com/wallpapers/best-nature-image.jpg" class="img-fluid" alt="Nature image 1">
+      </div>
+      <div class="col-md-15">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" class="img-fluid" alt="Nature image 2">
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="container py-5" id="contact">
+    <h2 class="section-title">Contact Us</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card p-4 shadow-lg border-0">
+          <form method="POST" action="/Nature" class="contact-form">
+            <div class="mb-3">
+              <label for="name" class="form-label">Your Name</label>
+              <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Your Email</label>
+              <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email" required />
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea name="message" id="message" class="form-control" rows="5" placeholder="Your message..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-success w-100">Send Message</button>
+          </form>
+
+          {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+              {% for category, message in messages %}
+                <div class="alert alert-{{ category }} mt-3">{{ message }}</div>
+              {% endfor %}
+            {% endif %}
+          {% endwith %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Nature vibes. All rights reserved.</p>
+    <div class="social-icons">
+      <i class="bi bi-facebook"></i>
+      <i class="bi bi-twitter"></i>
+      <i class="bi bi-instagram"></i>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js" integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: space-explorer
+    env: python
+    branch: main
+    buildCommand: ""
+    startCommand: gunicorn app:app
+    region: oregon
+    plan: free
